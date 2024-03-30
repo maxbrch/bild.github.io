@@ -1,0 +1,21 @@
+<!-- templates/index.html -->
+
+{% extends "layout.html" %}
+
+{% block content %}
+    <h1>Коментарі</h1>
+    <div id="comments">
+        {% for comment in comments %}
+            <div class="comment">
+                <h3>{{ comment[1] }}</h3>
+                <p>{{ comment[2] }}</p>
+            </div>
+        {% endfor %}
+    </div>
+    <h2>Залиште свій коментар</h2>
+    <form method="POST" action="{{ url_for('add_comment') }}">
+        <input type="text" name="name" placeholder="Ім'я" required><br>
+        <textarea name="comment" placeholder="Коментар" required></textarea><br>
+        <input type="submit" value="Відправити">
+    </form>
+{% endblock %}
