@@ -1,0 +1,98 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+img, video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.navbar-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.nav-item-home, .nav-item-type-work, .nav-item-contacts, .nav-link-clients {
+  position: static;
+  margin-bottom: 10px;
+}
+
+.oposite-img {
+    padding: 20px;
+    text-align: center;
+}
+
+.ahome, .evryone {
+  font-size: 40px;
+}
+
+.SecondLevel {
+  font-size: 20px;
+  text-align: center;
+}
+
+.type-works, .clients {
+  width: 100%;
+  padding: 20px;
+}
+
+.contact-info{
+    text-align: center;
+}
+/* Слайдер */
+.carousel {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.carousel-item img, 
+.carousel-item video {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Медіазапит для планшетів */
+@media (min-width: 768px) {
+  .navbar-nav {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .ahome, .evryone {
+    font-size: 80px;
+  }
+
+  .SecondLevel {
+    font-size: 40px;
+  }
+}
+
+/* Медіазапит для десктопів */
+@media (min-width: 1024px) {
+  .navbar-nav {
+    justify-content: space-between;
+  }
+
+  .oposite-img {
+    padding: 50px;
+  }
+
+  .ahome, .evryone {
+    font-size: 120px;
+  }
+
+  .SecondLevel {
+    font-size: 52px;
+  }
+
+  .type-works, .clients {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}
